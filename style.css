@@ -2,17 +2,17 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400&display=swap);
 body {
   margin: 0;
+  background-color: #d0efff;
 }
 .wrapper {
-  text-align: center;
-  background: linear-gradient(
-    43deg,
-    rgba(53, 161, 239, 1) 36%,
-    rgba(78, 219, 212, 1) 100%
-  );
-  color: #d0efff;
-  min-height: 100vh;
-}
+    text-align: center;
+    background: linear-gradient(
+      43deg,
+      rgba(53, 161, 239, 1) 36%,
+      rgba(78, 219, 212, 1) 100%
+    );
+    color: #d0efff;
+  }
 
 /* Logo of NiterNotebot */
 
@@ -82,13 +82,16 @@ a {
 
 .btn {
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .waves {
+  position: relative;
   width: 100%;
-  position: absolute;
-  bottom: -58px;
-  left: 0;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 /* Animation */
@@ -119,67 +122,16 @@ a {
     transform: translate3d(85px, 0, 0);
   }
 }
-
-/* screen size for desktop */
-@media screen and (min-width: 700px) {
-  h1 {
-    font-size: 48px;
-  }
-
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
   .waves {
-    height: 120px;
-    bottom: 0px;
+    height: 40px;
+    min-height: 40px;
   }
-  .button {
-    margin-inline: 80px;
+  .content {
+    height: 30vh;
   }
-  .btn {
-    margin-top: 20px;
-  }
-}
-
-/* screen size for tablet, landscape phone view */
-@media only screen and (max-width: 699px) and (min-width: 551px) {
   h1 {
-    font-size: 25px;
-    margin-top: 50px;
-  }
-  img {
-    width: 40px;
-    padding-top: 30px;
-    display: inline-block;
-  }
-  .button {
-    padding: 0.1875rem 0.375rem;
-  }
-  .btn {
-    margin-top: 0;
-  }
-  .waves {
-    height: 80px;
-    bottom: -125px;
-  }
-  .wrapper {
-    height: 120vh;
-  }
-}
-
-/* screen size for mobile */
-@media (max-width: 550px) {
-  .waves {
-    height: 150px;
-  }
-
-  .button {
-    padding: 0.375rem 0.15rem;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-  img {
-    width: 40px;
-    padding-top: 80px;
-    display: inline-block;
+    font-size: 24px;
   }
 }
